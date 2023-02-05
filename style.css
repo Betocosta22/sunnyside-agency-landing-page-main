@@ -1,0 +1,149 @@
+/*
+- Family: [Barlow](https://fonts.google.com/specimen/Barlow)
+- Weights: 600
+font-family: 'Barlow', sans-serif;
+*/
+@import url('https://fonts.googleapis.com/css2?family= Barlow: wght@600&display=swap');
+
+/*
+- Family: [Fraunces](https://fonts.google.com/specimen/Fraunces)
+- Weights: 700, 900
+font-family: 'Fraunces', serif;
+*/
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap');
+
+
+:root{
+    /*--- Colors ---*/
+    /*--- Primary ---*/
+    --Softred: hsl(7, 99%, 70%);
+    --Yellow: hsl(51, 100%, 49%);
+    /*-(graphic-design-text)-*/
+    --Dark-desaturated-cyan: hsl(167, 40%, 24%);
+    /*-(photography-text)-*/
+    --Dark-blue: hsl(198, 62%, 26%);
+    /*-(footer)-*/
+    --Dark-moderate-cyan: hsl(168, 34%, 41%);
+    /*--- Neutral ---*/
+    --Very-dark-desaturated-blue: hsl(212, 27%, 19%);
+    --Very-dark-grayish-blue: hsl(213, 9%, 39%);
+    --Dark-grayish-blue: hsl(232, 10%, 55%);
+    --Grayish-blue: hsl(210, 4%, 67%);
+    --White: hsl(0, 0%, 100%);
+}
+body {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+header {
+    padding: 1em;
+}
+#logo {
+    margin: 1em;
+}
+#menu {
+    display: flex;
+    list-style: none;
+    gap: .5rem;
+}
+#btn-mobile {
+    display: none;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+li a {
+    text-decoration: none;
+}
+header h1 {
+    font-family: 'Fraunces', serif;
+    color: var(--White);
+    
+}
+.logo-menu {
+    display: flex;
+}
+
+/*--- Mobile: 375px ---*/
+@media only screen and (max-width: 600px){
+    #logo {
+        margin-right: 45vw;
+    }
+    header {
+        background-image: url(./images/mobile/image-header.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 100vh;
+        
+    }
+    .arrow {
+        text-align: center;
+    }
+    header h1 {
+        text-align: center;
+        font-weight: 900;
+        letter-spacing: .3em;
+        margin: 2em;
+    }
+    .header-text {
+        display: block;
+    }
+    #btn-mobile {
+        text-align: right;
+        display: block;
+        background-image: url(./images/icon-hamburger.svg);
+        background-repeat: no-repeat;
+        height: 37px;
+        width: 37px;
+        margin: 1em;
+    }
+    #menu {
+        display: block;
+        position: absolute;
+        width: 80%;
+        top: 70px;
+        right: 40px;
+        background-color: var(--White);
+        transition: .6s;
+        z-index: 1000;
+        height: 0px;
+        visibility: hidden;
+        overflow-y: auto;
+        text-align: center;
+        
+    }
+    #menu::after{
+        content: "";
+        width: 0; 
+        height: 0;
+        background-color: transparent;
+        border: 10px solid transparent;
+        border-top: 10px solid blue;
+        border-left: 10px solid blue;
+      
+    }
+    #menu a:hover {
+        border: solid;
+    }
+    #nav.active #menu {
+        height: calc(45vh - 70px);
+        visibility: visible;
+    }
+    li {
+        margin: 2em;
+    }
+    #menu a {
+        padding: 1rem 0;
+        margin: 1em;;
+        font-weight: bold;
+        letter-spacing: .2em;
+    }
+   
+}
+/*--- Desktop: 1440px ---*/
+@media only screen and (max-width: 1440px){
+
+}
