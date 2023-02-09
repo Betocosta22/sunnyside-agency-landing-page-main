@@ -63,6 +63,10 @@ header h1 {
     color: var(--White);
     
 }
+h1 h2 h3 {
+    font-family: 'Fraunces', serif;
+    color: var();
+}
 .logo-menu {
     display: flex;
 }
@@ -75,8 +79,24 @@ header h1 {
     header {
         background-image: url(./images/mobile/image-header.jpg);
         background-repeat: no-repeat;
-        background-size: contain;
+        background-size: 100% 100%;
         height: 60vh;
+    }
+    .triangulo {
+        width: 0; 
+        height: 0; 
+        border-top: 25px solid transparent;
+        border-bottom: 25px solid transparent; 
+        border-right:25px solid var(--White);
+        position: absolute;
+        top: 63px;
+        right: 40px; 
+        transition: .2s;
+        visibility: hidden;
+        overflow-y: auto;
+    }
+    #nav.active .triangulo {
+        visibility: visible;
     }
     .arrow {
         margin: 3em 0 0 0;
@@ -102,6 +122,7 @@ header h1 {
         margin: 1em;
     }
     #menu {
+        margin-top: 1em;
         display: block;
         position: absolute;
         width: 80%;
@@ -116,18 +137,14 @@ header h1 {
         text-align: center;
         
     }
-    #menu::after{
-        content: "";
-        width: 0; 
-        height: 0;
-        background-color: transparent;
-        border: 10px solid transparent;
-        border-top: 10px solid blue;
-        border-left: 10px solid blue;
-      
-    }
     #menu a:hover {
-        border: solid;
+        font-family: 'Fraunces', serif;
+        color: black;
+        font-weight: bold;
+        background-color: var(--Yellow);
+        border-radius: 30px;
+        padding: 1em 1.5em;
+        text-transform: uppercase;
     }
     #nav.active #menu {
         height: calc(45vh - 70px);
@@ -141,30 +158,92 @@ header h1 {
         margin: 1em;;
         font-weight: bold;
         letter-spacing: .2em;
+        font-family: 'Barlow', sans-serif;
+        color: var(--Dark-grayish-blue);
     }
     .transform {
         margin: 0;
+        text-align: center;
+        padding: 2em 1em;
     }
-    .laranja-mob {
+    .ovo-mob {
         margin: 0;
         padding: 0;
         background-image: url(./images/mobile/image-transform.jpg);
         background-repeat: no-repeat;
-        background-size: cover
+        background-size: 100% 100%;
+        height: 35vh;
+        width: 100vw;
+    }
+    .stand-out-mob {
+        background-image: url(./images/mobile/image-stand-out.jpg);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        height: 35vh;
+        width: 100vw;
+    }
+    .graphics-design-mob {
+        background-image: url(./images/mobile/image-graphic-design.jpg);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        height: 45vh;
+        width: 100vw;
+    }
+    .photography-mob {
+        background-image: url(./images/mobile/image-photography.jpg);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        height: 45vh;
+        width: 100vw;
     }
    
 }
 /*--- Desktop: 1440px ---*/
 @media only screen and (min-width: 610px){
     #logo {
-        margin-right: 45vw;
+        margin-right: 60vw;
+    }
+    #menu {
+        margin: 1em;
+        gap: 3em;
+    }
+    #menu a {
+        font-family: 'Barlow', sans-serif;
+        color: var(--White);
+    }
+    #menu a:hover {
+        font-family: 'Fraunces', serif;
+        color: black;
+        font-weight: bold;
+        background-color: var(--White);
+        border-radius: 30px;
+        padding: 1em 1.5em;
+        text-transform: uppercase;
+    }
+    #menu a:active {
+        font-family: 'Fraunces', serif;
+        color: var(--White);
+        font-weight: bold;
+        background-color: var(--Dark-blue);
+        border-radius: 30px;
+        padding: 1em 1.5em;
+        text-transform: uppercase;
+    }
+    .header-text{
+        text-align: center;
+        letter-spacing: .5em;
+        margin: 12em;
+    }
+    .arrow {
+        margin: 10em;
+        text-align: center;
     }
     header {
         background-image: url(./images/desktop/image-header.jpg);
         background-repeat: no-repeat;
-        background-size: contain;
-        height: 75vh;
+        background-size: 100% 100%;
         width: 100%;
+        height: 100vh;
         
     }
     .arrow {
