@@ -166,6 +166,9 @@ h1 h2 h3 {
         text-align: center;
         padding: 2em 1em;
     }
+    .transform figure {
+        display: none;
+    }
     .ovo-mob {
         margin: 0;
         padding: 0;
@@ -207,11 +210,11 @@ h1 h2 h3 {
 /*--- Desktop: 1440px ---*/
 @media only screen and (min-width: 610px){
     #logo {
-        margin-right: 60vw;
+        margin-right: 50vw;
     }
     #menu {
         margin: 1em;
-        gap: 3em;
+        gap: 1.5em;
     }
     #menu a {
         font-family: 'Barlow', sans-serif;
@@ -223,7 +226,7 @@ h1 h2 h3 {
         font-weight: bold;
         background-color: var(--White);
         border-radius: 30px;
-        padding: 1em 1.5em;
+        padding: .5em 1em;
         text-transform: uppercase;
     }
     #menu a:active {
@@ -232,7 +235,7 @@ h1 h2 h3 {
         font-weight: bold;
         background-color: var(--Dark-blue);
         border-radius: 30px;
-        padding: 1em 1.5em;
+        padding: .5em 1em;
         text-transform: uppercase;
     }
     .header-text{
@@ -254,5 +257,13 @@ h1 h2 h3 {
     }
     .arrow {
         text-align: center;
+    }
+    .transform {
+        display: flex;
+        margin: 0;
+    }
+    .transform figure {
+        width: 50vw;
+        height: 75vh;
     }
 }
