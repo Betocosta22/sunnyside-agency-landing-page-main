@@ -265,5 +265,6 @@ h1 h2 h3 {
     .transform figure {
         width: 50vw;
         height: 75vh;
+        margin: 0;
     }
 }
